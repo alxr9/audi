@@ -1,0 +1,484 @@
+*{
+overflow-x: hidden;
+scroll-behavior: smooth;
+margin: auto;
+ box-sizing: border-box;
+}
+
+body{
+    font-family: "mundial", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    color: white;
+    background-color: black;
+}
+
+.container {
+    margin: auto;
+    overflow: hidden;
+    
+}
+
+/* 1. La barra de navegación (sin el padding lateral) */
+#navbar {
+    height: 8rem;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    transition: height 0.4s, padding 0.4s;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    padding: 20px 10px; /* Volvemos a un padding simple */
+}
+
+/* 2. Regla común para TODAS las columnas (los <a>) */
+#navbar a {
+    display: flex;
+    justify-content: center; /* Centra el logo dentro de su columna */
+}
+/* ¡LA MAGIA! Forzamos los logos de los lados hacia el centro */
+
+/* El margen derecho del primer logo se come todo el espacio a su derecha */
+#navbar a:first-child {
+    margin-right: auto;
+}
+
+/* El margen izquierdo del último logo se come todo el espacio a su izquierda */
+#navbar a:last-child {
+    margin-left: auto;
+}
+
+/* Damos un poco de aire al logo central para que no se pegue a los otros */
+#navbar a:nth-child(2) {
+    /* Margen: 0 arriba/abajo, 5% a izquierda/derecha */
+    margin: 0 2%;
+}
+
+
+/* 3. El logo ahora se ajusta dentro de su columna */
+#navbar .logo {
+    width: 100%; /* El logo ocupará el 60% del ancho de su columna (<a>) */
+    max-width: 150px; /* Un límite para que no se haga gigante en pantallas anchas */
+    transition: width 0.4s, max-width 0.4s; /* Hacemos la transición suave */
+}
+
+
+/* 4. Estilos para cuando la barra se encoge con la clase .navbar-chica */
+#navbar.navbar-chica {
+    height: 4rem;
+    padding: 10px 10px;
+}
+
+/* El logo se encoge dentro de su columna, que no se ha movido */
+#navbar.navbar-chica .logo {
+    width: 70%;
+    max-width: 100px;
+}
+
+ #inicio img {
+    display: block;
+    margin: auto;
+    max-width: 100%;
+    height: auto;
+    z-index: -1;
+
+ }
+
+ nav {
+    background-color: black;
+    
+    
+  }
+
+  nav a{ 
+    
+
+}
+
+/* tab */
+.tab {
+    overflow: hidden;
+    background-color: white;
+    color: black;
+    text-align: center;
+    
+  }
+  
+  /* botones tab */
+  .tab button {
+    background-color: inherit;
+    text-align: justify;
+    align-items: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    
+    margin: auto;
+    padding-top: 15px;
+    padding-bottom: 30px;
+    padding-left: 200px;
+    padding-right: 200px;
+    transition: 0.3s;
+    color: black;
+    font-family: "mundial", sans-serif;
+    font-weight: 400;
+    font-size: 3em;
+    font-style: normal;
+    max-width: max-content;
+    max-width: fit-content;
+    text-shadow: 2px, 2px;
+    
+  }
+  .tab button a{
+  text-decoration: none;
+  background-color: inherit;
+  
+  
+  border: none;
+  outline: none;
+  cursor: pointer;
+  
+  color: black;
+
+  
+
+  }
+  /* background boton hover */
+  .tab button a:hover {
+    background-color: white;
+    color: rgb(225, 0, 0);
+    padding: 0,100px;
+    text-shadow: 1px 1px 80px rgba(51, 0, 0, 0.808);
+
+  }
+  
+  /* Create an active/current tablink class */
+  .tab button.active {
+    background-color: white;
+    color: rgb(225, 0, 0);
+  }
+  
+  /* Style the tab content */
+  .tabcontent {
+    display: none;
+     scroll-margin-top: 10rem;
+    animation: fadeEffect 1s;
+    
+    border: 1px solid white;
+    border-top: none;
+    color: black;
+    background-color: white;
+  }
+  .tabcontent .rect{
+    
+       width: 588.9px;
+        height: 7px;
+       background-color: rgb(225, 0, 0);
+      
+       
+     
+  }
+  .tabcontent h1{
+    padding-left: 30px;
+    text-align: left;
+    padding-top: 40px;
+    font-weight: 200;
+    font-size: 3em;
+    margin-right: 10%;
+    color:rgb(225, 0, 0); ;
+    text-shadow: 1px 1px 3px rgba(51, 0, 0, 0.808);
+    line-height: 40px;
+    overflow: hidden;
+    padding-bottom: 10px;
+    
+
+  }
+  .tabcontent p{
+    text-align: left;
+    padding-left: 30px;
+    padding-top: 30px;
+    margin-right: 9%;
+    
+
+  }
+
+  
+  .tabcontent img{
+    
+    float: left;
+    margin: auto;
+    max-width: 65%;
+    height: auto;
+    
+  }
+
+  .tabcontent {
+    animation: fadeEffect 1s; /* Fading effect takes 1 second */
+  }
+  
+  .tabcontent .lista {
+   padding-top: 20px;
+    padding-right: 200px;
+  }
+  /* Go from zero to full opacity */
+  @keyframes fadeEffect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  #general {
+    padding-top: 100px;
+    display: flex;
+    margin: auto;
+    
+    font-size: 1.5em;
+  }
+
+  #general .gen1 {
+    width: 100%;
+    text-align: left;
+    padding-left: 3%;
+    padding-bottom: 3% ;
+    
+  }
+
+  #general .gen2 {
+    width: 100%;
+    text-align: left;
+    padding-left: 3%;
+    padding-bottom: 3% ;
+    margin-top: 0%;
+    
+  }
+
+  #general .gen3 {
+    width: 100%;
+    text-align: left;
+    padding-left: 3%;
+    margin-right: 3%;
+    padding-bottom: 3% ;
+    margin-top: 0%;
+    
+  }
+
+  .footer {
+    background-color: #000;
+    color: #fff;
+    padding: 40px 20px;
+    font-family: "mundial", sans-serif;
+    font-size: 14px;
+  }
+  
+  .footer-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer-left,
+  .footer-center,
+  .footer-right {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 40px;
+  }
+  
+  .footer-nav {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .footer-nav a {
+    color: #ccc;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .footer-nav a:hover {
+    color: #fff;
+  }
+  
+  .footer-right {
+    text-align: right;
+    color: #888;
+  }
+  
+
+  /* =================================================================== */
+/* ESTILOS PARA EL MENÚ DE HAMBURGUESA (MÓVIL)             */
+/* =================================================================== */
+
+/* Por defecto, el icono de la hamburguesa y el menú están ocultos en escritorio */
+#hamburger-icon {
+    display: none;
+    cursor: pointer;
+}
+
+#hamburger-icon span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* El menú overlay que atenúa el fondo */
+.overlay {
+    height: 100%;
+    width: 0; /* Empieza cerrado (ancho 0) */
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo negro semitransparente */
+    overflow-x: hidden;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.overlay-content {
+    position: relative;
+    text-align: center;
+}
+
+.overlay-content h2 {
+    font-size: 3em;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+.overlay a {
+    padding: 15px;
+    text-decoration: none;
+    font-size: 36px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+}
+
+.overlay .logo {
+	max-width: 150px;
+	margin-bottom: 20px;
+	filter: brightness(0) invert(1); /* <-- AÑADE ESTA LÍNEA MÁGICA */
+}
+
+.overlay .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+
+/* =================================================================== */
+/* MEDIA QUERY PARA ORDENADORES PEQUEÑOS Y TABLETS         */
+/* =================================================================== */
+
+@media screen and (max-width: 1024px) {
+    /* Hacemos los botones de los autos más pequeños */
+    .tab button {
+        font-size: 2em;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    /* Apilamos las columnas de la sección "general" */
+    #general {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #general .gen1, #general .gen2, #general .gen3 {
+        width: 90%;
+        margin-bottom: 30px;
+    }
+}
+
+
+/* =================================================================== */
+/* MEDIA QUERY PARA TELÉFONOS (VERSIÓN CORREGIDA)          */
+/* =================================================================== */
+
+@media screen and (max-width: 768px) {
+    
+    /* ---- AJUSTES DE NAVBAR ---- */
+    #navbar a.desktop-logo {
+        display: none;
+    }
+
+    #navbar {
+        /* ¡CORRECCIÓN! Esto alinea el ícono a la izquierda de forma definitiva. */
+        justify-content: flex-start; 
+        padding: 10px 20px;
+    }
+
+    #navbar #hamburger-icon {
+        display: block;
+    }
+
+    /* ---- AJUSTES DE IMAGEN PRINCIPAL (WALLPAPER) ---- */
+
+    /* ¡NUEVO! Aplicamos el efecto de escala cuadrada a la imagen correcta */
+    #inicio img {
+        width: 100%; /* El ancho será el 100% de la pantalla */
+        height: 75vh; /* La altura será el 75% de la ALTURA de la pantalla (vh) */
+        object-fit: cover; /* La imagen cubre el área sin distorsionarse */
+    }
+
+
+    /* ---- AJUSTES DE TABS ---- */
+    .tab {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .tab button {
+        font-size: 1.5em;
+        padding: 20px 10px;
+        width: 90%;
+        margin-bottom: 10px;
+    }
+
+    /* ---- AJUSTES DE CONTENIDO DE TABS ---- */
+
+    /* ¡REVERSIÓN! Devolvemos las imágenes de los autos a su estado normal y adaptable */
+    .tabcontent img {
+        width: 100%;
+        height: auto; /* La altura se ajusta automáticamente */
+        object-fit: initial; /* Quitamos el efecto 'cover' de aquí */
+        max-width: 100%;
+        margin: 20px auto;
+    }
+
+    .tabcontent h1 {
+        font-size: 2em;
+    }
+
+    .tabcontent .lista {
+        padding-right: 20px;
+    }
+
+    /* ---- AJUSTES DEL FOOTER ---- */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .footer-right {
+        text-align: center;
+    }
+}
